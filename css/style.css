@@ -8,67 +8,67 @@
     display: grid;
     border-bottom: solid 20px #000912ea;      
 }
-.header nav{
-    position: fixed;
-    top: 0px;
-    background-color: transparent;
-}
-.header-img{
-    justify-self: center;
-    padding: 20px;
-}
-.header-list{
-    margin: 20px 5px;
-    padding: 0px;
-    list-style-type: none;
-    background-color: #fcfdff;
-}
-.header-list li{
-    padding: 10px;
-}
-.header-list a{
-    font-size: 20px;
-    text-decoration: none;
-    color: #003e78;
-    border-bottom: 2px solid #0165C6;
-}
-.header-list a:hover{
-    color: #0165C6;
-}
+    .header nav{
+        position: fixed;
+        top: 0px;
+        background-color: transparent;
+    }
+    .header-img{
+        justify-self: center;
+        padding: 20px;
+    }
+    .header-list{
+        margin: 20px 5px;
+        padding: 0px;
+        list-style-type: none;
+        background-color: #fcfdff;
+    }
+    .header-list li{
+        padding: 10px;
+    }
+    .header-list a{
+        font-size: 20px;
+        text-decoration: none;
+        color: #003e78;
+        border-bottom: 2px solid #0165C6;
+    }
+    .header-list a:hover{
+        color: #0165C6;
+    }
 .main{
     display: flex;
     flex-direction: column;
     color: #001D3A;
-}
-.main-section{
-    margin: 40px 0px;
-    padding: 2px 15px;
-    text-align: center;
-    border-bottom: 10px solid #0165C6;
-}
-.sub-section{
-    margin: 30px 10px;
-    background-color: #F9F9F9;
-    padding: 2px 15px;
-    box-shadow: 1px 1px 10px #cccccc;
-}
-.sub-section a{
-    font-size: 20px;
-    padding: 4px;
-    text-decoration: none;
-    color: #0165C6;
-    border-bottom: 2px solid #0165C6;
-}
-.sub-section a:hover{
-    color: #001D3A;
-}
-.section-title{
-    font-size: 35px;
-    color: #001D3A;
-}
-.section-title span{
-    color: #0165C6;
-}
+    }
+    .main-section{
+        margin: 40px 0px;
+        padding: 2px 15px;
+        text-align: center;
+        border-bottom: 10px solid #0165C6;
+    }
+    .sub-section{
+        margin: 30px 10px;
+        background-color: #F9F9F9;
+        padding: 2px 15px;
+        box-shadow: 1px 1px 10px #cccccc;
+    }
+    .sub-section a{
+        font-size: 20px;
+        padding: 4px;
+        text-decoration: none;
+        color: #0165C6;
+        border-bottom: 2px solid #0165C6;
+    }
+    .sub-section a:hover{
+        color: #001D3A;
+    }
+    .section-title{
+        font-size: 35px;
+        color: #001D3A;
+    }
+    .section-title span{
+        color: #0165C6;
+    }
 .footer{
     padding: 30px 15px;
     display: flex;
@@ -79,28 +79,28 @@
     background-color: #000912ea;
     border-top: solid #0165C6;
 }
-.footer-section{
-    margin: 0px 10px;
-}
-.footer-list{
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
-    font-size: 14px;
-}
-.footer-list a{
-    text-decoration: none;
-    color: #fcfdff;
-}
-.footer-list a:hover{
-    font-weight: bold;
-    color: #0165C6;
-}
-.footer .section-title{
-    font-size: 25px;
-    color: #fcfdff;
-    border-bottom: solid #0165C6;
-}
+    .footer-section{
+        margin: 0px 10px;
+    }
+    .footer-list{
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+        font-size: 14px;
+    }
+    .footer-list a{
+        text-decoration: none;
+        color: #fcfdff;
+    }
+    .footer-list a:hover{
+        font-weight: bold;
+        color: #0165C6;
+    }
+    .footer-section-title{
+        font-size: 25px;
+        color: #fcfdff;
+        border-bottom: solid #0165C6;
+    }
 .credit-text{
     margin: 0px;
     padding: 20px;
@@ -115,7 +115,7 @@
         margin: 0px 50px;
         padding: 10px;
     }
-    .footer .section-title{
+    .footer-section-title{
         font-size: 30px;
     }
     .main{
@@ -164,7 +164,7 @@
         margin: 0px 50px;
         padding: 10px;
     }
-    .footer .section-title{
+    .footer-section-title{
         font-size: 35px;
     }
     .main{
@@ -179,6 +179,8 @@
         font-size: 24px;
     }
     .sub-section{
+        max-width: 90%;
+        margin: 30px auto;
         padding: 30px 10%;
     }
 }
