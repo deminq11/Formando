@@ -21,13 +21,18 @@
   list-style-type: none;
 }
 .header nav .header-list li {
-  padding: 10px;
+  padding: 5px 10px;
+  width: fit-content;
+  border-bottom: 3px solid rgba(0, 9, 18, 0.9176470588);
+  transition: border-color 0.4s ease-out;
+}
+.header nav .header-list li:hover {
+  border-color: #0165C6;
 }
 .header nav .header-list li a {
   font-size: 20px;
   text-decoration: none;
   color: #003e78;
-  border-bottom: 2px solid #0165C6;
 }
 .header nav .header-list li a:hover {
   color: #0165C6;
@@ -195,6 +200,7 @@
     max-width: 90%;
     margin: 30px auto;
     padding: 30px 10%;
+    height: 75%;
   }
 }
 .sub-section {
