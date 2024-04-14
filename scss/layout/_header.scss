@@ -1,35 +1,34 @@
+@import "../abstracts/variables";
 .header{
     margin: 15px 0px;
     display: grid;
-    border-bottom: solid 20px #000912ea;
+    border-bottom: solid 20px $tertiary-color;
     nav{
         position: fixed;
         top: 0px;
         background-color: transparent;
-    }
-}
-.header-img{
-    justify-self: center;
-    padding: 20px;
-}
-.header-list{
-    margin: 20px 5px;
-    padding: 0px;
-    list-style-type: none;
-    background-color: #fcfdff;
-    li{
-        padding: 10px;
-    }
-    a{
-        font-size: 20px;
-        text-decoration: none;
-        color: #003e78;
-        border-bottom: 2px solid #0165C6;
-        &:hover{
-            color: #0165C6;
+        .header-list{
+            margin: 20px 5px;
+            padding: 0px;
+            list-style-type: none;
+            li{
+                padding: 10px;
+                a{
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: $secondary-color;
+                    border-bottom: 2px solid $primary-color;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
         }
     }
-    
+    .header-img{
+        justify-self: center;
+        padding: 20px;
+    }
 }
 @media screen and (min-width:990px) {
     .header{
@@ -39,12 +38,12 @@
             position: static;
             background-color: transparent;
             justify-self: center;
+            .header-list{
+                display: flex;
+            }
         }
-    }
-    .header-img{
-        padding: 0px;
-    }
-    .header-list{
-        display: flex;
+        .header-img{
+            padding: 0px;
+        }
     }
 }

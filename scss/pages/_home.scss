@@ -1,0 +1,79 @@
+@import "../abstracts/variables";
+.main{
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+    .section-title{
+        font-size: 35px;
+        color: $text-color;
+        span{
+            color: $primary-color;
+        }
+    }
+    .main-section{
+        margin: 40px 0px;
+        padding: 5px 15px;
+        text-align: center;
+        border-bottom: 20px solid $primary-color;
+    }
+    .sub-section{
+        margin: 30px 10px;
+        background-color: $bg-color;
+        padding: 2px 15px;
+        box-shadow: $box-shadow;
+        a{
+            font-size: 20px;
+            padding: 4px;
+            text-decoration: none;
+            color: $primary-color;
+            border-bottom: 2px solid $primary-color;
+            &:hover{
+                color: $text-color;
+            }
+        }
+    
+    }
+}
+@media screen and (min-width:768px){
+    .main{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        font-size: 20px;
+        .section-title{
+            font-size: 37px;
+        }
+        .sub-section{
+            padding: 10px 10%;
+        }
+        .main-section{
+            grid-column: span 2;
+            padding: 5px 25%;
+            font-size: 22px;
+            span{
+                display: block;
+            }
+        }
+    }
+}
+@media screen and (min-width:1024px){
+    .main{
+        margin-bottom: 50px;
+        font-size: 22px;
+        .section-title{
+            font-size: 40px;
+        }
+        .main-section{
+            padding: 70px 25%;
+            font-size: 24px;
+            .section-title{
+                font-size: 50px;
+            }
+        }
+        .sub-section{
+            max-width: 90%;
+            margin: 30px auto;
+            padding: 30px 10%;
+        }
+    }
+}

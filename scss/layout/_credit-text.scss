@@ -1,0 +1,11 @@
+@import "../abstracts/variables";
+
+.credit-text{
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    font-weight: lighter;
+    font-size: small;
+    background-color: $bg-color-credits;
+    color: $text-color-credits;
+}

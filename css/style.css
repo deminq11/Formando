@@ -2,6 +2,7 @@
   background-color: #fcfdff;
   font-family: "New Title", serif;
   font-family: "Satoshi", sans-serif;
+  color: #001D3A;
 }
 
 .header {
@@ -14,29 +15,26 @@
   top: 0px;
   background-color: transparent;
 }
-
-.header-img {
-  justify-self: center;
-  padding: 20px;
-}
-
-.header-list {
+.header nav .header-list {
   margin: 20px 5px;
   padding: 0px;
   list-style-type: none;
-  background-color: #fcfdff;
 }
-.header-list li {
+.header nav .header-list li {
   padding: 10px;
 }
-.header-list a {
+.header nav .header-list li a {
   font-size: 20px;
   text-decoration: none;
   color: #003e78;
   border-bottom: 2px solid #0165C6;
 }
-.header-list a:hover {
+.header nav .header-list li a:hover {
   color: #0165C6;
+}
+.header .header-img {
+  justify-self: center;
+  padding: 20px;
 }
 
 @media screen and (min-width: 990px) {
@@ -49,14 +47,15 @@
     background-color: transparent;
     justify-self: center;
   }
-  .header-img {
-    padding: 0px;
-  }
-  .header-list {
+  .header nav .header-list {
     display: flex;
+  }
+  .header .header-img {
+    padding: 0px;
   }
 }
 .footer {
+  margin-top: 50px;
   padding: 30px 15px;
   display: flex;
   justify-content: center;
@@ -66,32 +65,50 @@
   background-color: rgba(0, 9, 18, 0.9176470588);
   border-top: solid #0165C6;
 }
-
-.footer-section {
+.footer .footer-section {
   margin: 0px 10px;
 }
-
-.footer-list {
+.footer .footer-section .section-title {
+  font-size: 25px;
+  color: #fcfdff;
+  border-bottom: solid #0165C6;
+}
+.footer .footer-section .footer-list {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
   font-size: 14px;
 }
-.footer-list a {
+.footer .footer-section .footer-list a {
   text-decoration: none;
   color: #fcfdff;
 }
-.footer-list :hover {
+.footer .footer-section .footer-list a:hover {
   font-weight: bold;
   color: #0165C6;
 }
 
-.footer-section-title {
-  font-size: 25px;
-  color: #fcfdff;
-  border-bottom: solid #0165C6;
+@media screen and (min-width: 768px) {
+  .footer-section {
+    margin: 0px 50px;
+    padding: 10px;
+  }
+  .footer-section .section-title {
+    font-size: 30px;
+  }
 }
-
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 75px 0px 30px;
+  }
+  .footer .footer-section {
+    margin: 0px 50px;
+    padding: 10px;
+  }
+  .footer .footer-section .section-title {
+    font-size: 35px;
+  }
+}
 .credit-text {
   margin: 0px;
   padding: 20px;
@@ -102,40 +119,84 @@
   color: #cccccc;
 }
 
-@media screen and (min-width: 768px) {
-  .footer-section {
-    margin: 0px 50px;
-    padding: 10px;
-  }
-  .footer-section-title {
-    font-size: 30px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .footer {
-    padding: 75px 0px 30px;
-  }
-  .footer-section {
-    margin: 0px 50px;
-    padding: 10px;
-  }
-  .footer-section-title {
-    font-size: 35px;
-  }
-}
 .main {
   display: flex;
   flex-direction: column;
   color: #001D3A;
 }
-
-.main-section {
+.main .section-title {
+  font-size: 35px;
+  color: #001D3A;
+}
+.main .section-title span {
+  color: #0165C6;
+}
+.main .main-section {
   margin: 40px 0px;
-  padding: 2px 15px;
+  padding: 5px 15px;
   text-align: center;
-  border-bottom: 10px solid #0165C6;
+  border-bottom: 20px solid #0165C6;
+}
+.main .sub-section {
+  margin: 30px 10px;
+  background-color: #F9F9F9;
+  padding: 2px 15px;
+  box-shadow: 1px 1px 10px #cccccc;
+}
+.main .sub-section a {
+  font-size: 20px;
+  padding: 4px;
+  text-decoration: none;
+  color: #0165C6;
+  border-bottom: 2px solid #0165C6;
+}
+.main .sub-section a:hover {
+  color: #001D3A;
 }
 
+@media screen and (min-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    font-size: 20px;
+  }
+  .main .section-title {
+    font-size: 37px;
+  }
+  .main .sub-section {
+    padding: 10px 10%;
+  }
+  .main .main-section {
+    grid-column: span 2;
+    padding: 5px 25%;
+    font-size: 22px;
+  }
+  .main .main-section span {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    margin-bottom: 50px;
+    font-size: 22px;
+  }
+  .main .section-title {
+    font-size: 40px;
+  }
+  .main .main-section {
+    padding: 70px 25%;
+    font-size: 24px;
+  }
+  .main .main-section .section-title {
+    font-size: 50px;
+  }
+  .main .sub-section {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 30px 10%;
+  }
+}
 .sub-section {
   margin: 30px 10px;
   background-color: #F9F9F9;
@@ -153,52 +214,94 @@
   color: #001D3A;
 }
 
-.section-title {
-  font-size: 35px;
-  color: #001D3A;
-}
-.section-title span {
-  color: #0165C6;
-}
-
 @media screen and (min-width: 768px) {
-  .main {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    font-size: 20px;
-  }
-  .main .section-title {
-    font-size: 37px;
-  }
   .sub-section {
     padding: 10px 10%;
   }
-  .main-section {
-    grid-column: span 2;
-    padding: 0px 25%;
-    font-size: 22px;
-  }
-  .main-section span {
-    display: block;
-  }
 }
 @media screen and (min-width: 1024px) {
-  .main {
-    margin: 0px 0px 50px;
-    font-size: 22px;
-  }
-  .main .section-title {
-    font-size: 40px;
-  }
-  .main-section {
-    padding: 50px 25%;
-    font-size: 24px;
-  }
   .sub-section {
     max-width: 90%;
     margin: 30px auto;
     padding: 30px 10%;
+  }
+}
+.inscription {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
+  font-size: 17px;
+}
+.inscription .section-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0165C6;
+  width: fit-content;
+}
+.inscription .inscription-section, .inscription .registration-section {
+  margin: 25px 40px 0px;
+}
+.inscription .registration-section .registration-field {
+  width: 100%;
+}
+.inscription .registration-section .registration-field ul {
+  list-style: none;
+  padding: 0;
+}
+.inscription .registration-section .registration-field ul li label {
+  display: block;
+}
+.inscription .registration-section .registration-field ul li input {
+  width: 100%;
+  font-size: 15px;
+}
+.inscription .registration-section .registration-field button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #0165C6;
+  color: #fcfdff;
+}
+.inscription .registration-section .registration-field button:hover {
+  background-color: rgba(0, 9, 18, 0.9176470588);
+}
+
+@media screen and (min-width: 768px) {
+  .inscription {
+    display: flex;
+    flex-direction: row;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 40px;
+    justify-content: center;
+  }
+  .inscription .inscription-section {
+    max-width: 30%;
+    margin: 20px 40px;
+  }
+  .inscription .inscription-section .section-title {
+    margin: 20px 0px;
+  }
+  .inscription .registration-section {
+    margin: 20px 40px;
+  }
+  .inscription .registration-section .section-title {
+    margin: 20px 0px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .inscription {
+    max-width: 100%;
+    font-size: 19px;
+  }
+  .inscription .section-title {
+    font-size: 30px;
+  }
+  .inscription .inscription-section {
+    max-width: 20%;
   }
 }
 

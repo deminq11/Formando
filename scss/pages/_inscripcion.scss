@@ -1,0 +1,62 @@
+@import "../abstracts/variables";
+.inscription{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 17px;
+    .section-title{
+        font-size: 28px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid $primary-color;
+        width: fit-content;
+    }
+    .inscription-section, .registration-section{
+        margin: 25px 40px 0px;
+    }
+    .registration-section{
+        .registration-field{
+            @include form;
+            button{
+            margin-top: 30px;
+            width: 100%;
+            @include button(primary);
+            }
+        }
+    }
+}
+@media screen and (min-width:768px){
+    .inscription{
+        display: flex;
+        flex-direction: row;
+        max-width: 80%;
+        margin: 0 auto;
+        gap: 40px;
+        justify-content: center;
+        .inscription-section{
+            max-width: 30%;
+            margin: 20px 40px;
+            .section-title{
+                margin: 20px 0px;
+            }
+        }
+        .registration-section{
+            margin: 20px 40px;
+            .section-title{
+                margin: 20px 0px;
+            }
+        }
+    }
+}
+@media screen and (min-width:1024px){
+    .inscription{
+        max-width: 100%;
+        font-size: 19px;
+        .section-title{
+            font-size: 30px;
+        }
+        .inscription-section{
+            max-width: 20%;
+        }
+    }
+}
