@@ -9,12 +9,20 @@
     color: $text-color-light;
     background-color: $bg-color-dark;
     border-top: solid $primary-color;
+    &:hover{
+        .footer-section{
+            .section-title{
+                border-bottom: solid $primary-color;
+            }
+        }
+    }
     .footer-section{
         margin: 0px 10px;
         .section-title{
             font-size: 25px;
             color: $text-color-light;
-            border-bottom: solid $primary-color;
+            box-sizing: border-box;
+            transition: border-width ease-out 0.2s;
         }
         .footer-list{
             margin: 0px;
@@ -24,8 +32,8 @@
             a{
                 text-decoration: none;
                 color: #fcfdff;
+                transition: color linear 0.2s;
                 &:hover{
-                    font-weight: bold;
                     color: $primary-color;
                 }
             }

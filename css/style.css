@@ -21,16 +21,18 @@
   list-style-type: none;
 }
 .header nav .header-list li {
-  padding: 5px 10px;
+  padding: 3px 10px;
   width: fit-content;
+  font-size: 20px;
   border-bottom: 3px solid rgba(0, 9, 18, 0.9176470588);
-  transition: border-color 0.4s ease-out;
+  transition: border, box-shadow 0.4s ease-out;
 }
 .header nav .header-list li:hover {
+  background-color: transparent;
   border-color: #0165C6;
+  box-shadow: 0px -9px 2px -8px #0165C6 inset;
 }
 .header nav .header-list li a {
-  font-size: 20px;
   text-decoration: none;
   color: #003e78;
 }
@@ -70,13 +72,17 @@
   background-color: rgba(0, 9, 18, 0.9176470588);
   border-top: solid #0165C6;
 }
+.footer:hover .footer-section .section-title {
+  border-bottom: solid #0165C6;
+}
 .footer .footer-section {
   margin: 0px 10px;
 }
 .footer .footer-section .section-title {
   font-size: 25px;
   color: #fcfdff;
-  border-bottom: solid #0165C6;
+  box-sizing: border-box;
+  transition: border-width ease-out 0.2s;
 }
 .footer .footer-section .footer-list {
   margin: 0px;
@@ -87,9 +93,9 @@
 .footer .footer-section .footer-list a {
   text-decoration: none;
   color: #fcfdff;
+  transition: color linear 0.2s;
 }
 .footer .footer-section .footer-list a:hover {
-  font-weight: bold;
   color: #0165C6;
 }
 
@@ -122,6 +128,7 @@
   font-size: small;
   background-color: rgba(0, 9, 18, 0.937254902);
   color: #cccccc;
+  box-shadow: 0px -25px 50px -35px inset #003e78;
 }
 
 .main {
@@ -146,17 +153,20 @@
   margin: 30px 10px;
   background-color: #F9F9F9;
   padding: 2px 15px;
-  box-shadow: 1px 1px 10px #cccccc;
+  box-shadow: 0px 0px 10px #cccccc;
 }
 .main .sub-section a {
   font-size: 20px;
   padding: 4px;
   text-decoration: none;
-  color: #0165C6;
+  color: #001D3A;
   border-bottom: 2px solid #0165C6;
+  transition: border, box-shadow 0.4s ease-out;
 }
 .main .sub-section a:hover {
-  color: #001D3A;
+  color: #0165C6;
+  background-color: transparent;
+  box-shadow: 0px -9px 2px -8px #0165C6 inset;
 }
 
 @media screen and (min-width: 768px) {
@@ -207,17 +217,20 @@
   margin: 30px 10px;
   background-color: #F9F9F9;
   padding: 2px 15px;
-  box-shadow: 1px 1px 10px #cccccc;
+  box-shadow: 0px 0px 10px #cccccc;
 }
 .sub-section a {
   font-size: 20px;
   padding: 4px;
   text-decoration: none;
-  color: #0165C6;
+  color: #001D3A;
   border-bottom: 2px solid #0165C6;
+  transition: border, box-shadow 0.4s ease-out;
 }
 .sub-section a:hover {
-  color: #001D3A;
+  color: #0165C6;
+  background-color: transparent;
+  box-shadow: 0px -9px 2px -8px #0165C6 inset;
 }
 
 @media screen and (min-width: 768px) {
@@ -235,21 +248,22 @@
 .inscription {
   display: flex;
   flex-direction: column;
-  max-width: 90%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 20px auto;
   font-size: 17px;
+}
+.inscription:hover .section-title {
+  border-color: #0165C6;
 }
 .inscription .section-title {
   font-size: 28px;
   margin-bottom: 10px;
-  border-bottom: 2px solid #0165C6;
+  border-bottom: 2px solid #003e78;
   width: fit-content;
+  transition: border 0.2s linear;
 }
 .inscription .inscription-section, .inscription .registration-section {
-  margin: 25px 40px 0px;
-}
-.inscription .registration-section .registration-field {
-  width: 100%;
+  margin-top: 20px;
 }
 .inscription .registration-section .registration-field ul {
   list-style: none;
@@ -257,10 +271,16 @@
 }
 .inscription .registration-section .registration-field ul li label {
   display: block;
+  margin: 4px 0px;
 }
 .inscription .registration-section .registration-field ul li input {
   width: 100%;
   font-size: 15px;
+  border: 2px solid #003e78;
+  transition: border linear 0.4s;
+}
+.inscription .registration-section .registration-field ul li input:hover {
+  border-color: #0165C6;
 }
 .inscription .registration-section .registration-field button {
   margin-top: 30px;
@@ -268,6 +288,7 @@
   padding: 5px 10px;
   border: none;
   border-radius: 3px;
+  transition: all linear 0.2s;
   background-color: #0165C6;
   color: #fcfdff;
 }
@@ -279,35 +300,177 @@
   .inscription {
     display: flex;
     flex-direction: row;
-    max-width: 80%;
-    margin: 0 auto;
-    gap: 40px;
+    gap: 60px;
     justify-content: center;
   }
   .inscription .inscription-section {
     max-width: 30%;
-    margin: 20px 40px;
-  }
-  .inscription .inscription-section .section-title {
-    margin: 20px 0px;
-  }
-  .inscription .registration-section {
-    margin: 20px 40px;
-  }
-  .inscription .registration-section .section-title {
-    margin: 20px 0px;
   }
 }
 @media screen and (min-width: 1024px) {
   .inscription {
-    max-width: 100%;
-    font-size: 19px;
+    gap: 100px;
   }
   .inscription .section-title {
     font-size: 30px;
   }
-  .inscription .inscription-section {
-    max-width: 20%;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 20px auto;
+  font-size: 17px;
+}
+.contact:hover .section-title {
+  border-color: #0165C6;
+}
+.contact .section-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #003e78;
+  width: fit-content;
+  transition: border 0.2s linear;
+}
+.contact .description-section, .contact .address, .contact .message-section {
+  margin-top: 20px;
+  height: fit-content;
+}
+.contact .address .address-list {
+  padding: 0px;
+  list-style: none;
+}
+.contact .address .address-list a {
+  text-decoration: none;
+  color: #001D3A;
+}
+.contact .address .address-list a:hover {
+  color: #0165C6;
+}
+.contact .message-section .message-entry ul {
+  list-style: none;
+  padding: 0;
+}
+.contact .message-section .message-entry ul li label {
+  display: block;
+  margin: 4px 0px;
+}
+.contact .message-section .message-entry ul li input {
+  width: 100%;
+  font-size: 15px;
+  border: 2px solid #003e78;
+  transition: border linear 0.4s;
+}
+.contact .message-section .message-entry ul li input:hover {
+  border-color: #0165C6;
+}
+.contact .message-section .message-entry li input, .contact .message-section .message-entry li textarea {
+  font-size: 14px;
+  width: 100%;
+  resize: none;
+  border: 2px solid #003e78;
+  transition: border linear 0.4s;
+}
+.contact .message-section .message-entry li input:hover, .contact .message-section .message-entry li textarea:hover {
+  border-color: #0165C6;
+}
+.contact .message-section .message-entry button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  transition: all linear 0.2s;
+  background-color: #F9F9F9;
+  color: #001D3A;
+  border: 2px solid #003e78;
+}
+.contact .message-section .message-entry button:hover {
+  background-color: #003e78;
+  color: #fcfdff;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 50%;
+    gap: 40px;
+    justify-content: center;
+  }
+  .contact grid .description-section {
+    width: 100%;
+  }
+  .contact grid .description-section .address {
+    display: block;
+  }
+  .contact .message-section {
+    grid-column: span 2;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 1250px) {
+  .contact {
+    grid-template-columns: 35% 25%;
+  }
+}
+.rules {
+  width: 80%;
+  margin: 40px auto;
+  padding: 1px 15px 30px;
+  border: 10px solid rgba(0, 9, 18, 0.9176470588);
+  border-left: 3px ridge #0165C6;
+  border-right: 3px ridge #0165C6;
+  border-radius: 10px;
+  transition: linear 0.2s;
+}
+.rules:hover {
+  box-shadow: 0px 0px 20px -5px #0165C6;
+}
+.rules .section-title {
+  margin-top: 40px;
+  border-bottom: solid #0165C6;
+  width: fit-content;
+}
+.rules .rules-section {
+  margin-top: 20px;
+}
+.rules .rules-section:hover .section-title {
+  border-color: #0165C6;
+}
+.rules .rules-section .section-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #003e78;
+  width: fit-content;
+  transition: border 0.2s linear;
+}
+.rules .rules-section .section-title {
+  font-size: 20px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .rules {
+    width: 70%;
+  }
+  .rules .rules-section {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rules {
+    width: 60%;
+  }
+  .rules .section-title {
+    font-size: 45px;
+  }
+  .rules .rules-section {
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .rules {
+    width: 50%;
   }
 }
 

@@ -1,0 +1,71 @@
+@import "../abstracts/variables";
+.contact{
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 20px auto;
+    font-size: 17px;
+    @include hover-border;
+    .description-section,.address, .message-section{
+        margin-top: 20px;
+        height: fit-content;
+    }
+    .address{
+        .address-list{
+            padding: 0px;
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $text-color;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .message-section{
+        .message-entry{
+            @include form;
+            li{
+                input, textarea{
+                    font-size: 14px;
+                    width: 100%;
+                    resize: none;
+                    border: 2px solid $secondary-color;
+                    transition: border linear 0.4s;
+                    &:hover{
+                    border-color: $primary-color;
+                    }
+                }
+            }
+            button{
+                margin-top: 10px;
+                @include button(neutral);
+            }
+        }
+    }
+}
+@media screen and (min-width:768px){
+    .contact{
+        display: grid;
+        grid-template-columns: 50%;
+        gap: 40px;
+        justify-content: center;
+        grid
+        .description-section{
+        width: 100%;
+            .address{
+                display: block;
+            }
+        }
+        .message-section{
+            grid-column: span 2;
+            margin-top: 0px;
+        }
+    }
+}
+@media screen and (min-width:1250px){
+    .contact{
+        grid-template-columns: 35% 25%;
+    }
+}

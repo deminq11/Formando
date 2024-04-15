@@ -2,17 +2,12 @@
 .inscription{
     display: flex;
     flex-direction: column;
-    max-width: 90%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 20px auto;
     font-size: 17px;
-    .section-title{
-        font-size: 28px;
-        margin-bottom: 10px;
-        border-bottom: 2px solid $primary-color;
-        width: fit-content;
-    }
+    @include hover-border;
     .inscription-section, .registration-section{
-        margin: 25px 40px 0px;
+        margin-top: 20px;
     }
     .registration-section{
         .registration-field{
@@ -29,34 +24,18 @@
     .inscription{
         display: flex;
         flex-direction: row;
-        max-width: 80%;
-        margin: 0 auto;
-        gap: 40px;
+        gap: 60px;
         justify-content: center;
         .inscription-section{
             max-width: 30%;
-            margin: 20px 40px;
-            .section-title{
-                margin: 20px 0px;
-            }
-        }
-        .registration-section{
-            margin: 20px 40px;
-            .section-title{
-                margin: 20px 0px;
-            }
         }
     }
 }
 @media screen and (min-width:1024px){
     .inscription{
-        max-width: 100%;
-        font-size: 19px;
+        gap: 100px;
         .section-title{
             font-size: 30px;
-        }
-        .inscription-section{
-            max-width: 20%;
         }
     }
 }

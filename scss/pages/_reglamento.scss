@@ -1,0 +1,52 @@
+@import "../abstracts/variables";
+.rules{
+    width: 80%;
+    margin: 40px auto;
+    padding: 1px 15px 30px;
+    border: 10px solid $tertiary-color;
+    border-left: 3px ridge $primary-color;
+    border-right: 3px ridge $primary-color;
+    border-radius: 10px;
+    transition: linear 0.2s;
+    &:hover{
+        box-shadow: 0px 0px 20px -5px $primary-color;
+    }
+    .section-title{
+        margin-top: 40px;
+        border-bottom: solid $primary-color;
+        width: fit-content;
+    }
+    .rules-section{
+        @include hover-border;
+        margin-top: 20px;
+        .section-title{
+            font-size: 20px;
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+}
+@media screen and (min-width:768px){
+    .rules{
+        width: 70%;
+        .rules-section{
+            margin-top: 30px;
+        }
+    }
+}
+@media screen and (min-width:1024px){
+    .rules{
+        width: 60%;
+        .section-title{
+            font-size: 45px;
+        }
+        .rules-section{
+            margin-top: 40px;
+        }
+    }
+}
+@media screen and (min-width:1280px){
+    .rules{
+        width: 50%;
+    }
+}
