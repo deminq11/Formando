@@ -149,6 +149,10 @@
   text-align: center;
   border-bottom: 20px solid #0165C6;
 }
+.main .main-section a {
+  text-decoration: none;
+  transition: color 0.2s linear;
+}
 .main .sub-section {
   margin: 30px 10px;
   background-color: #F9F9F9;
@@ -201,7 +205,7 @@
   }
   .main .main-section {
     padding: 70px 25%;
-    font-size: 24px;
+    font-size: 20px;
   }
   .main .main-section .section-title {
     font-size: 50px;
